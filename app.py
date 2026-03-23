@@ -34,6 +34,27 @@ def index():
     return render_template("index.html")
 
 
+
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html")
+
+
+@app.route("/terms")
+def terms():
+    return render_template("terms.html")
+
+
+@app.route("/sitemap.xml")
+def sitemap():
+    return render_template("sitemap.xml"), 200, {"Content-Type": "application/xml"}
+
 @app.route("/split", methods=["POST"])
 def split():
     if "gif" not in request.files:

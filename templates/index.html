@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GIF Tools — Free Online GIF Splitter & Frame Editor</title>
   <meta name="google-site-verification" content="UHbxZ1m5CC3Q1t-d10GhHhKVgR4tjEP8HZHd0gunIeg" />
-  <title>GIF Tools</title>
+  <meta name="description" content="Free online GIF splitter and joiner. Split any GIF into individual PNG frames, edit them, remove backgrounds, then rejoin into a new GIF. No signup, no watermarks." />
+  <meta name="keywords" content="GIF splitter, GIF to frames, split GIF, GIF background remover, GIF editor, free GIF tool, animated GIF editor, GIF frame extractor" />
+  <meta name="author" content="Gavin Van Vuuren" />
+  <meta property="og:title" content="GIF Tools — Free GIF Splitter & Joiner" />
+  <meta property="og:description" content="Split any GIF into frames, edit them, and rejoin into a new GIF. Free, no signup required." />
+  <meta property="og:url" content="https://gif-tools.onrender.com" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://gif-tools.onrender.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -380,9 +388,85 @@
       .steps { grid-template-columns: 1fr; }
       .wrap { padding: 40px 16px 60px; }
     }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 32px;
+      background: rgba(11,11,16,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.2rem; cursor: pointer; }
+    @media (max-width: 560px) {
+      .nav-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--surface); flex-direction: column; padding: 16px 32px; gap: 16px; border-bottom: 1px solid var(--border); }
+      .nav-links.open { display: flex; }
+    }
+
+    .seo-text {
+      max-width: 760px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .seo-text h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .seo-text h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin: 16px 0 6px;
+    }
+    .seo-text p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.7;
+      opacity: 0.7;
+    }
   </style>
 </head>
 <body>
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">🎞 GIF Tools</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Service</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+</nav>
+
 <div class="wrap">
 
   <header>
@@ -489,8 +573,20 @@
     </div>
   </div>
 
+  
+  <!-- SEO Content -->
+  <div class="seo-text">
+    <h2>Free Online GIF Splitter & Frame Editor</h2>
+    <p>GIF Tools is a free online tool that lets you split any animated GIF into individual PNG frames, edit them in any image editor, and rejoin them back into a smooth animated GIF. Perfect for removing backgrounds from GIFs, touching up individual frames, or creating custom animations.</p>
+    <h3>How to split a GIF into frames</h3>
+    <p>Simply upload your GIF file and click "Split into Frames". Your browser will download a ZIP file containing every frame as a PNG image, along with a timing file to preserve the original animation speed.</p>
+    <h3>How to rejoin GIF frames</h3>
+    <p>After editing your PNG frames, upload them all together using the "Rejoin GIF" tab. GIF Tools will stitch them back together into an animated GIF, preserving your original frame timing.</p>
+    <h3>Remove backgrounds from GIFs for free</h3>
+    <p>Use GIF Tools to extract frames, remove the background from each frame using any free image editor, then rejoin them into a transparent animated GIF.</p>
+  </div>
   <footer>
- Built by Gavin Van Vuuren &nbsp;·&nbsp; Free to use
+    Built by Gavin Van Vuuren &nbsp;·&nbsp; <a href="/privacy" style="color:var(--muted)">Privacy</a> &nbsp;·&nbsp; <a href="/terms" style="color:var(--muted)">Terms</a>
   </footer>
 
 </div>

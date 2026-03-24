@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — GIF Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0b0b10; --surface: #13131c; --card: #1b1b27; --border: #2a2a3d;
+      --accent: #7c6af7; --accent2: #c084fc; --text: #e8e6f5; --muted: #5a5870;
+    }
+    html, body { min-height: 100vh; background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 48px 48px; opacity: 0.3; pointer-events: none; z-index: 0;
+    }
+    .navbar {
+      position: sticky; top: 0; z-index: 100; display: flex; align-items: center;
+      justify-content: space-between; padding: 14px 32px;
+      background: rgba(11,11,16,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.2rem; cursor: pointer; }
+    @media (max-width: 560px) {
+      .nav-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--surface); flex-direction: column; padding: 16px 32px; gap: 16px; border-bottom: 1px solid var(--border); }
+      .nav-links.open { display: flex; }
+    }
+    .wrap { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+    h1 { font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 800; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--text) 30%, var(--accent2)); -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
+    .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 40px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 28px 30px; margin-bottom: 20px; }
+    .card h2 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--accent2); }
+    .card p { font-size: 0.88rem; line-height: 1.8; color: var(--muted); }
+    .card p + p { margin-top: 12px; }
+    .accent { color: var(--accent); }
+    footer { text-align: center; margin-top: 60px; font-size: 0.75rem; color: var(--muted); }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <a href="/" class="nav-logo">🎞 GIF Tools</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Service</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+</nav>
+
+<div class="wrap">
+  <h1>About GIF Tools</h1>
+  <p class="subtitle">The story behind the tool</p>
+
+  <div class="card">
+    <h2>What is GIF Tools?</h2>
+    <p>GIF Tools is a free, no-signup web application that lets you split animated GIFs into individual frames, edit them however you like, and rejoin them back into a new GIF.</p>
+    <p>Whether you want to remove backgrounds, touch up individual frames, or just inspect what's inside a GIF — this tool makes it simple and free.</p>
+  </div>
+
+  <div class="card">
+    <h2>Who built this?</h2>
+    <p>GIF Tools was built by <span class="accent">Gavin Van Vuuren</span>, a developer who wanted a simple, free tool to edit GIF frames without paying for expensive software or dealing with watermarks.</p>
+    <p>What started as a personal Python script became a desktop app, and then a fully hosted web tool — all built from scratch.</p>
+  </div>
+
+  <div class="card">
+    <h2>How does it work?</h2>
+    <p>Upload your GIF and the tool splits every frame into a PNG image, packages them into a ZIP file, and lets you download them instantly. Once you've edited your frames in any image editor, simply re-upload them and the tool stitches them back together into a smooth animated GIF — preserving the original frame timing.</p>
+  </div>
+
+  <div class="card">
+    <h2>Is it really free?</h2>
+    <p>Yes — completely free. No account required, no watermarks, no hidden fees. GIF Tools is a passion project built to be genuinely useful to anyone who needs it.</p>
+  </div>
+
+  <footer>
+    &copy; 2026 GIF Tools by Gavin Van Vuuren &nbsp;·&nbsp;
+    <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="/terms">Terms of Service</a>
+  </footer>
+</div>
+</body>
+</html>

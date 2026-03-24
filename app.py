@@ -1,3 +1,4 @@
+
 """
 GIF Tools Web — Flask Backend
 ==============================
@@ -50,6 +51,12 @@ def privacy():
 def terms():
     return render_template("terms.html")
 
+
+
+@app.route("/robots.txt")
+def robots():
+    content = "User-agent: *\nAllow: /\n\nSitemap: https://gif-tools.onrender.com/sitemap.xml\n"
+    return content, 200, {"Content-Type": "text/plain"}
 
 @app.route("/sitemap.xml")
 def sitemap():

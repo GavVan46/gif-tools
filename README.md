@@ -1,33 +1,49 @@
+# GIF Splitter Online Tool
+
+👉 https://gif-tools.onrender.com/
+
+Free online tool to split GIFs into frames, download them, and rebuild GIFs after editing — all directly in your browser.
+
+## Features
+
+- Extract all frames from a GIF
+- Download frames individually
+- Rebuild GIF after editing
+- No signup required
+- Runs fully in the browser (no uploads)
+
+## Use it online
+
+👉 https://gif-tools.onrender.com/
+
+---
+
+## How it works
+
+1. Upload your GIF
+2. Extract frames
+3. Download or edit them
+4. Rebuild your GIF
+
+---
+
+## Why this tool?
+
+Most GIF tools compress quality or require accounts.  
+This tool keeps original frames and works instantly with no friction.
+
+---
+
+## Keywords
+
+gif splitter online, extract frames from gif, gif to images, gif frame extractor
+
+---
 # GIF Tools Web
 
 Split GIFs into frames, edit them, rejoin into a new GIF — all in the browser.
 
-## Run locally
 
-```bash
-pip install -r requirements.txt
-python app.py
-```
-Then open http://localhost:5000
-
-## Deploy to Render (free)
-
-1. Push this folder to a GitHub repo
-2. Go to https://render.com and sign up (free)
-3. Click **New → Web Service**
-4. Connect your GitHub repo
-5. Set:
-   - **Build command:** `pip install -r requirements.txt`
-   - **Start command:** `gunicorn app:app`
-6. Click **Deploy** — you'll get a public URL like `https://gif-tools.onrender.com`
-
-## Deploy to Railway (free tier)
-
-1. Push this folder to a GitHub repo
-2. Go to https://railway.app and sign up
-3. Click **New Project → Deploy from GitHub**
-4. Select your repo — Railway auto-detects the Procfile
-5. Done! You'll get a public URL instantly.
 
 ## Project structure
 

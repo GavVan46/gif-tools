@@ -1,4 +1,3 @@
-
 """
 GIF Tools Web — Flask Backend
 ==============================
@@ -55,7 +54,7 @@ def terms():
 
 @app.route("/robots.txt")
 def robots():
-    content = "User-agent: *\nAllow: /\n\nSitemap: https://gif-tools.onrender.com/sitemap.xml\n"
+    content = "User-agent: *\nAllow: /\n\nSitemap: https://industries-online.co.za/sitemap.xml\n"
     return content, 200, {"Content-Type": "text/plain"}
 
 @app.route("/sitemap.xml")
